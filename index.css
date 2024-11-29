@@ -1,0 +1,310 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 1rem;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#hero {
+  text-align: center;
+  padding: 2rem;
+  background: #f4f4f4;
+}
+
+section {
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input,
+form select,
+form textarea {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+/*footer {
+  text-align: center;
+  padding: 1rem;
+  background: #333;
+  color: #fff;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+/* General container styling */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+.header {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Tab button styling */
+.tab {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #9fe01d;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.tab1 {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #bf7c10;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+/* Active tab button */
+.tab.active {
+  background-color: #4caf50;
+  color: #fff;
+  border-color: #4caf50;
+  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+}
+
+/* Hover effect for tabs */
+.tab:hover {
+  background-color: #f4f4f4;
+  color: #4caf50;
+  border-color: #4caf50;
+  box-shadow: 0 3px 8px rgba(76, 175, 80, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+      flex-direction: column;
+  }
+
+  .tab {
+      width: 90%;
+      margin: 5px 0;
+  }
+}
+
+
+
+/* Tab container */
+.tab-container {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between the SVG icon and the text */
+  padding: 10px 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none; /* Removes underline if used inside an <a> tag */
+}
+
+/* SVG icon styling */
+.tab-container svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: #4caf50; /* Green color for the icon */
+  stroke-width: 2;
+  transition: stroke 0.3s ease; /* Smooth color change on hover */
+}
+
+/* Text span styling */
+.tab-container span {
+  font-size: 16px;
+  color: #333;
+  transition: color 0.3s ease; /* Smooth text color change on hover */
+}
+
+/* Hover effect for the tab */
+.tab-container:hover {
+  background-color: #e3f2fd; /* Light blue background on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for SVG icon */
+.tab-container:hover svg {
+  stroke: #1976d2; /* Change icon color to blue on hover */
+}
+
+/* Hover effect for text */
+.tab-container:hover span {
+  color: #1976d2; /* Change text color to blue on hover */
+}
+
+
+
+
+footer {
+  background-color: #63aaf6; /* Blue background */
+  color: white; /* White text for contrast */
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer p {
+  margin: 0; /* Remove default margin for the paragraph */
+  font-size: 14px;
+}
+
+.social-media {
+  margin-top: 15px; /* Add spacing between the text and icons */
+}
+
+.social-media a {
+  color: white; /* White color for the icons */
+  margin: 0 10px; /* Space between icons */
+  font-size: 24px; /* Adjust icon size */
+  text-decoration: none; /* Remove underline from links */
+  transition: transform 0.3s, color 0.3s; /* Smooth hover effect */
+}
+
+.social-media a:hover {
+  transform: scale(1.2); /* Scale icons on hover */
+  color: #FFD700; /* Change color on hover (gold) */
+}
+
+
+
+
+/*contact*/
+#contact {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contact h2 {
+  text-align: center;
+  color: #333;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact label {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+#contact input, #contact select, #contact textarea {
+  padding: 10px;
+  margin: 8px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#contact button {
+  padding: 12px;
+  background-color: #bf7c10;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contact button:hover {
+  background-color: #a5670d;
+}

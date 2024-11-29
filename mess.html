@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f3f4f6;
+    }
+    .message-container {
+      text-align: center;
+      padding: 30px;
+      background-color: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+    }
+    h1 {
+      font-size: 24px;
+      color: #4CAF50;
+    }
+    p {
+      font-size: 18px;
+      color: #333;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .back-btn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="message-container">
+    <h1>Thank You for Contacting Us!</h1>
+    <p>You will be redirected to the home page in <span id="timer">45</span> seconds.</p>
+    <a href="index1.html" class="back-btn">Back</a>
+  </div>
+
+  <script>
+    // Countdown timer
+    let timeLeft = 45; // 45 seconds
+    const timerElement = document.getElementById('timer');
+    const countdown = setInterval(() => {
+      timeLeft--;
+      timerElement.textContent = timeLeft;
+      if (timeLeft <= 0) {
+        clearInterval(countdown);
+        window.location.href = 'index1.html'; // Redirect to the home page
+      }
+    }, 1000);
+
+    // Optional: Redirect automatically after 45 seconds
+    setTimeout(() => {
+      window.location.href = 'index1.html'; // Redirect to the home page
+    }, 45000);
+  </script>
+</body>
+</html>

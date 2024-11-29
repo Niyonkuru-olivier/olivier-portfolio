@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.skills-container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.center {
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.skill-card {
+    text-align: center;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 3px solid #ddd;
+}
+
+.skill-card p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    background-color: #e3f2fd;
+}
+
+
+/*CSS for Back Tag*/
+/* General back button container styling */
+.back {
+    position: fixed; /* Fixes the button to the bottom */
+    bottom: 20px; /* Distance from the bottom of the page */
+    left: 50%; /* Centers horizontally */
+    transform: translateX(-50%); /* Aligns it to the center */
+    z-index: 100; /* Ensures it stays above other elements */
+}
+
+/* Back button styling */
+.back button {
+    background-color: #4caf50; /* Green background */
+    color: white; /* White text */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none; /* Removes border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth hover effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds shadow */
+}
+
+/* Back button hover effect */
+.back button:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+
+/* Back button focus effect */
+.back button:focus {
+    outline: none; /* Removes default focus outline */
+    background-color: #3e8e41; /* Even darker green */
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.8); /* Glow effect */
+}
+

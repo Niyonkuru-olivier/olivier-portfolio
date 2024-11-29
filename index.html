@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olivier's Portfolio</title>
+  <link rel="stylesheet" href="index.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  
+
+</head>
+<body>
+  <header id="home">
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <span>
+        <button
+            class="theme-toggle-button inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 w-9"
+            aria-label="Toggle theme">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-sun h-[1.5rem] w-[1.3rem] dark:hidden">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2"></path>
+                <path d="M12 20v2"></path>
+                <path d="m4.93 4.93 1.41 1.41"></path>
+                <path d="m17.66 17.66 1.41 1.41"></path>
+                <path d="M2 12h2"></path>
+                <path d="M20 12h2"></path>
+                <path d="m6.34 17.66-1.41 1.41"></path>
+                <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-moon hidden h-5 w-5 dark:block" style="margin-top: 0%;">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+            <span class="sr-only">Toggle theme</span>
+        </button>
+    
+        <script>
+            // Select the toggle button
+            const themeToggleButton = document.querySelector('.theme-toggle-button');
+    
+            // Get current theme from localStorage or default to 'light'
+            const currentTheme = localStorage.getItem('theme') || 'light';
+    
+            // Set the theme initially
+            const applyTheme = (theme) => {
+                document.body.classList.toggle('dark', theme === 'dark');
+                document.body.classList.toggle('light', theme === 'light');
+            };
+    
+            applyTheme(currentTheme);
+    
+            // Add click event listener
+            themeToggleButton.addEventListener('click', () => {
+                // Toggle between dark and light themes
+                const newTheme = document.body.classList.contains('dark') ? 'light' : 'dark';
+    
+                // Apply the new theme
+                applyTheme(newTheme);
+    
+                // Save the theme in localStorage
+                localStorage.setItem('theme', newTheme);
+            });
+        </script>
+    <style>
+      body.light {
+          background-color: white;
+          
+      }
+
+      body.dark {
+          background-color: black;
+          color:#625858;
+      }
+  </style>
+        
+</span>
+    
+    </nav>
+  </header>
+
+  <section id="hero">
+    <table>
+      <tr><td>
+    <h1>Hi, I'm Olivier</h1>
+    <p>
+      As a skilled software engineer, I deliver innovative, high-performance solutions that elevate user 
+      experience and optimize business processes. With extensive experience in both frontend and backend development, 
+      I specialize in using modern technologies and frameworks to build scalable, maintainable applications. My deep 
+      technical knowledge and commitment to staying ahead of industry trends enable me to consistently deliver reliable, 
+      impactful software that addresses the dynamic needs of businesses and users.
+    </p>
+    
+    <button onclick="window.location.href=''"style="border-radius: 5px;">
+      <a href="my resume.pdf" style="text-decoration: none;color:rgb(74, 233, 68);">My Resume</a>
+      
+      </button> 
+    <button onclick="window.location.href='#contact'" style="background-color:rgb(78, 203, 228);border-radius: 5px;">Contact Me</button>
+    
+  </td>
+  <td>
+<img src="Screenshot_20240401-192305_1.png" alt="olivier" style="width: 220px; 
+height: 220px; 
+border-radius: 50%; 
+object-fit: cover; 
+border: 2px solid #625858;
+margin-top: 0%; ">
+</td>
+</tr>
+  </table>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I specialize in crafting innovative, high-impact solutions that prioritize user experience and streamline business processes. 
+      With proficiency in a broad tech stack—JavaScript, TypeScript, Python, React, Next.js, Node.js, Express, 
+      Flask, PostgreSQL, and MongoDB—I have the versatility to work across both frontend and backend development, creating 
+      seamless, responsive applications.
+
+      My expertise lies in leveraging the latest frameworks and tools, including Docker and various CSS frameworks, to 
+       robust, scalable applications 
+      that meet modern standards. From designing clean, intuitive user interfaces to architecting efficient backend systems, 
+      I am dedicated to delivering software that is both effective and maintainable.
+      
+      Committed to continuous learning, I stay engaged with industry advancements to ensure I’m always equipped with the best 
+      solutions to address evolving business needs. I am driven to not only meet but exceed expectations, delivering reliable, 
+      high-quality software that adapts to the changing needs of users.
+      
+      I am a strong believer in the power of collaboration and thrive in team environments where exchanging ideas and learning from others fuel 
+      collective success. Let’s connect and build impactful solutions together that make a difference!.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h1 style="margin-bottom: 0px;">My Skills</h1>
+    <br>
+    <div class="container" >
+      <div class="header">
+          <a href="front.html"><button class="tab active" >Front End</button></a>
+          <a href="back.html"><button class="tab " >Back End</button></a>
+          <a href="technology.html" ><button class="tab1 " >Technologies</button></a>
+      </div>   
+  </div>
+
+
+  </section>
+
+  <section id="experience">
+    
+    <h2>Professional Experience</h2>
+    <div>
+      <div class="tab-container">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar h-4 w-4">
+        <path d="M8 2v4">
+        </path><path d="M16 2v4">
+        </path>
+        <rect width="18" height="18" x="3" y="4" rx="2">
+        </rect>
+        <path d="M3 10h18">
+        </path>
+        </svg>
+        <span>2024-Present</span>
+      </div>
+      <h3 style="display: flex; justify-content: space-between; align-items: center;">
+        <span>Software Engineer | <span style="color: #bf7c10;">IKIRARO Project</span></span>
+        <span style="color: #bf7c10;">
+          <a href="https://ikiraro-agri.netlify.app/" style="text-decoration: none;">IKIRARO Project</a>
+        </span>
+      </h3>
+      
+      <p style="opacity: 0.9; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.6; color: #333; background-color: #f9f9f9; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        In the Ikiraro project, I utilized languages like HTML, CSS, JavaScript, React.js, Node.js, and PostgreSQL to 
+        build a full-stack application. I gained hands-on experience in API development, database management, responsive design, 
+        and containerization with Docker. The project enhanced my problem-solving, collaboration, and deployment skills, including 
+        CI/CD pipeline implementation. Working on Ikiraro deepened my understanding of user-centered design, 
+        scalability, and maintaining high-performance systems in a real-world environment.
+      </p>
+      <p style="color:#f6a119">
+        <span style="margin-right: 20px;">HTML</span><span style="margin-right: 20px;">CSS</span>
+        <span style="margin-right: 20px;">JavaScript</span><span style="margin-right: 20px;">Node.js</span>
+        <span style="margin-right: 20px;">PostgreSQL</span>
+      </p>
+      
+    </div>
+    <div>
+      <div class="tab-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar h-4 w-4">
+          <path d="M8 2v4">
+          </path><path d="M16 2v4">
+          </path>
+          <rect width="18" height="18" x="3" y="4" rx="2">
+          </rect>
+          <path d="M3 10h18">
+          </path>
+          </svg>
+          <span>2024-Present</span>
+        </div>
+      <!--<h3><span>Full Stack Developer|</span><span style="color:#bf7c10;">Bus Ticketing Project</span></h3>-->
+      <h3 style="display: flex; justify-content: space-between; align-items: center;">
+        <span> Full Stack Developer| <span style="color: #bf7c10;">Bus Ticketing Project</span></span>
+        <span style="color: #bf7c10;">
+          <a href="https://bus-ticket.netlify.app/" style="text-decoration: none;">Bus Ticketing Project</a>
+        </span>
+      </h3>
+      <p style="opacity: 0.9; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.6; color: #333; background-color: #f9f9f9; 
+      padding: 15px; border-radius: 8px; 
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">In the Bus-Ticketing project, I used HTML, CSS, JavaScript, React.js, Node.js, and MongoDB to
+         develop a user-friendly platform. I gained experience in building interactive UIs, managing databases,
+          and integrating secure payment systems. This project improved my skills in backend development, API 
+          integration, and user authentication. I also enhanced my ability to create responsive, scalable applications, 
+        ensuring a seamless user experience and efficient ticket management system.</p>
+        <p style="color:#f6a119">
+          <span style="margin-right: 20px;">HTML</span><span style="margin-right: 20px;">CSS</span>
+          <span style="margin-right: 20px;">JavaScript</span><span style="margin-right: 20px;">Node.js</span>
+          <span style="margin-right: 20px;">PostgreSQL</span>
+          <span style="margin-right: 20px;">React.js</span><span style="margin-right: 20px;">MongoDB</span>
+        </p>
+    </div>
+    <div>
+      <div class="tab-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar h-4 w-4">
+          <path d="M8 2v4">
+          </path><path d="M16 2v4">
+          </path>
+          <rect width="18" height="18" x="3" y="4" rx="2">
+          </rect>
+          <path d="M3 10h18">
+          </path>
+          </svg>
+          <span>2023-2024</span>
+        </div>
+      
+      <h3 style="display: flex; justify-content: space-between; align-items: center;">
+        <span> Assistant IT Manager| <span style="color: #bf7c10;">Nyereka TEch</span></span>
+        <span style="color: #bf7c10;">
+          <a href="https://nyerekatech.com/" style="text-decoration: none;">Nyereka TEch</a>
+        </span>
+      </h3>
+      <p style="opacity: 0.9; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.6; color: #333; background-color: #f9f9f9; 
+      padding: 15px; border-radius: 8px; 
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">Nyereka Tech is a professional Rwanda IT Company that deals with different issues like
+repairing machines (Computers) and other electronic devices, developing different
+Software and developing different Websites, and providing training to Junior software
+developers. in this Company I act as an Assistant in IT where I Perform DIfferent tasks like
+training Junior/Beginner software developers, and so on.</p>
+
+        <p style="color:#f6a119">
+          <span>Assistant IT •Manager</span> 
+        </p>
+    </div>
+
+
+
+
+<br><br>
+    <h2 style="color:red;">High-Impact Personal Projects</h2>
+    <div class="tab-container">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar h-4 w-4">
+        <path d="M8 2v4">
+        </path><path d="M16 2v4">
+        </path>
+        <rect width="18" height="18" x="3" y="4" rx="2">
+        </rect>
+        <path d="M3 10h18">
+        </path>
+        </svg>
+        <span>2024-Present</span>
+      </div>
+      <h3 style="display: flex; justify-content: space-between; align-items: center;">
+        <span>Software Engineer | <span style="color: #bf7c10;">IKIRARO Project</span></span>
+        <span style="color: #bf7c10;">
+          <a href="https://ikiraro-agri.netlify.app/" style="text-decoration: none;">IKIRARO Project</a>
+        </span>
+      </h3>
+      
+      <p style="opacity: 0.9; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.6; color: #333; background-color: #f9f9f9; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        In the Ikiraro project, I utilized languages like HTML, CSS, JavaScript, React.js, Node.js, and PostgreSQL to 
+        build a full-stack application. I gained hands-on experience in API development, database management, responsive design, 
+        and containerization with Docker. The project enhanced my problem-solving, collaboration, and deployment skills, including 
+        CI/CD pipeline implementation. Working on Ikiraro deepened my understanding of user-centered design, 
+        scalability, and maintaining high-performance systems in a real-world environment.
+      </p>
+      <p style="color:black">
+        <span style="margin-right: 20px;">HTML</span><span style="margin-right: 20px;">CSS</span>
+        <span style="margin-right: 20px;">JavaScript</span><span style="margin-right: 20px;">Node.js</span>
+        <span style="margin-right: 20px;">PostgreSQL</span>
+      </p>
+      
+    </div>
+  </section>
+
+  <!--<section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="project">
+      <h3>EventHQ - Event Management System</h3>
+      <p>Tech Stack: Next.js, Stripe, PostgreSQL, AWS S3</p>
+    </div>
+    <div class="project">
+      <h3>Pregnancy-to-1k Tracker App</h3>
+      <p>Tech Stack: React Native, TypeScript, Android, iOS</p>
+    </div>
+  </section>-->
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <!-- Portfolio Table -->
+    <div class="portfolio-table">
+        <table>
+            <tr>
+                <!-- Project 1: IKIRARO Project -->
+                <td>
+                  <div class="project" style="background-color: #ebc07b; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);margin-bottom: 40px; ">
+                    <h3 style="margin-bottom: 15px; font-size: 1.8em;">IKIRARO Project</h3>
+                    <img src="ikiraro.png" alt="IKIRARO Project Screenshot" style="width: 100%; max-width: 600px; height: auto; border-radius: 5px; margin-bottom: 15px;">
+                    <p style="font-size: 1.1em; margin-bottom: 10px;">
+                        A platform designed to revolutionize agriculture by connecting farmers with resources and tools. 
+                        As a Software Engineer, I contributed to designing the responsive user interface and building 
+                        interactive frontend features using React.
+                    </p>
+                    <p style="font-size: 1.1em; margin-bottom: 15px;">
+                        <strong>Technologies:</strong> React, Node.js, HTML, CSS
+                    </p>
+                    <a href="https://ikiraro-agri.netlify.app/" target="_blank" 
+                       style="text-decoration: none; color: #bf7c10; font-size: 1.2em; font-weight: bold;">
+                       View Project
+                    </a>
+                </div>
+                
+                </td>
+                <!-- Project 2 -->
+                <td>
+                  <div class="project" style="background-color: #7beb8a; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);margin-bottom: 40px; margin-left: 40px;">
+                    <h3 style="margin-bottom: 15px; font-size: 1.8em;">Weather Forecast App</h3>
+                    <img src="weather.png" alt="Weather Forecast App Screenshot" style="width: 100%; max-width: 600px; height: auto; border-radius: 5px; margin-bottom: 15px;">
+                    <p style="font-size: 1.1em; margin-bottom: 10px;">
+                        Built a weather application that provides real-time weather data and forecasts. Designed the 
+                        frontend with a focus on user experience and implemented backend APIs to fetch accurate 
+                        weather data.
+                    </p>
+                    <p style="font-size: 1.1em; margin-bottom: 15px;">
+                        <strong>Technologies:</strong> JavaScript, Node.js, API Integration
+                    </p>
+                    <a href="https://weather.com/en-RW/weather/today/l/RWXX0001:1:RW?Goto=Redirected" target="_blank" 
+                       style="text-decoration: none; color: #bf7c10; font-size: 1.2em; font-weight: bold;">
+                       View Project
+                    </a>
+                </div>
+                
+                </td>
+            </tr>
+            <tr>
+                <!-- Project 3 -->
+                <td>
+                  <div class="project" style="background-color: #ce7cc2; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <h3 style="margin-bottom: 15px; font-size: 1.8em;">E-Commerce Website</h3>
+                    <img src="plus.png" alt="E-Commerce Website Screenshot" style="width: 100%; max-width: 600px; height: auto; border-radius: 5px; margin-bottom: 15px;">
+                    <p style="font-size: 1.1em; margin-bottom: 10px;">
+                        Developed a dynamic e-commerce platform featuring product catalogs, secure payment 
+                        integration, and user authentication. Played a key role in creating a smooth shopping 
+                        experience for customers.
+                    </p>
+                    <p style="font-size: 1.1em; margin-bottom: 15px;">
+                        <strong>Technologies:</strong> React, Firebase, Stripe API
+                    </p>
+                    <a href="https://www.uplus.rw/" target="_blank" 
+                       style="text-decoration: none; color: #bf7c10; font-size: 1.2em; font-weight: bold;">
+                       View Project
+                    </a>
+                </div>
+                
+                </td>
+                <!-- Project 4 -->
+                <td>
+<div class="project" style="background-color: #d29898; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin-left: 40px;">
+                    <h3 style="margin-bottom: 15px; font-size: 1.8em;">Personal Portfolio</h3>
+                    <img src="port.png" alt="Portfolio Screenshot" style="width: 100%; max-width: 600px; height: auto; border-radius: 5px; margin-bottom: 15px;">
+                    <p style="font-size: 1.1em; margin-bottom: 10px;">
+                        Designed and developed my personal portfolio website to showcase skills, projects, and achievements. 
+                        The site features a modern design with responsive functionality for various devices.
+                    </p>
+                    <p style="font-size: 1.1em; margin-bottom: 15px;">
+                        <strong>Technologies:</strong> HTML, CSS, JavaScript
+                    </p>
+                    <a href="index1.html" target="_blank" 
+                       style="text-decoration: none; color: #bf7c10; font-size: 1.2em; font-weight: bold;">
+                       View Project
+                    </a>
+                </div>
+                
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+  
+
+<section id="blog">
+  <h2>Blog</h2>
+  <table><tr><td>
+  <!-- Blog Post 1 -->
+  <div class="blog-post" style="background-color: #c77a7a;border-radius: 8px;">
+      <h3>My Journey into Web Development</h3>
+      <img src="web.jpeg" alt="Web Development" width="600px" height="300px">
+      <p class="post-date">Published on: January 15, 2024</p>
+      
+      <p>
+          Becoming a web developer has been an exciting journey. From the moment I started learning HTML and CSS, I knew this was the field I wanted to pursue. Over time, I expanded my skills to JavaScript, React, and Node.js, building real-world projects such as my personal portfolio and the IKIRARO Project.
+      </p>
+      <a href="blog/journey-into-web-development.html" class="read-more" style="text-decoration: none; color: #f69f13;"><strong style="margin-left: 20px;">Read more</strong></a>
+  </div>
+</td>
+<td>
+  <!-- Blog Post 2 -->
+  <div class="blog-post" style="margin-left: 40px;background-color: #9cdaf7;border-radius: 8px;">
+      <h3>The Importance of Responsive Web Design</h3>
+      <img src="design.jpeg" alt="Responsive Web Design" width="600px" height="300px">
+      <p class="post-date">Published on: February 3, 2024</p>
+      
+      <p>
+          One of the key lessons I’ve learned as a web developer is the significance of responsive web design. With an increasing number of users accessing websites from mobile devices, it is essential to create websites that look great and function properly across all screen sizes. In this blog post, I share some tips on how to ensure your site is responsive.
+      </p>
+      <a href="blog/responsive-web-design.html" class="read-more" style="text-decoration: none; color: #f69f13;"><strong style="margin-left: 20px;">Read more</strong></a>
+  </div>
+</td>
+</tr>
+<tr><td>
+  <!-- Blog Post 3 -->
+  <div class="blog-post" style="background-color: #c79cf7;border-radius: 8px;">
+      <h3>Why I Chose to Work with React for My Projects</h3>
+      <img src="react.jpeg" alt="React" width="600px" height="300px">
+      <p class="post-date">Published on: March 20, 2024</p>
+      
+      <p>
+          React has become one of my go-to tools for building modern web applications. In this post, I discuss why I prefer React over other frameworks, how it helps improve development speed, and how it fits into my development workflow. Learn why React is a fantastic choice for creating interactive user interfaces.
+      </p>
+      <a href="blog/why-react.html" class="read-more" style="text-decoration: none; color: #bf7c10;"><strong style="margin-left: 20px;">Read more</strong></a>
+  </div>
+</td>
+<td>
+  <!-- Blog Post 4: How I Used Node.js for Backend Development -->
+  <div class="blog-post" style="margin-left: 40px;background-color: #dff79c;border-radius: 8px;">
+    <h3>How I Used Node.js for Backend Development</h3>
+    <p class="post-date">Published on: April 10, 2024</p>
+    <img src="node1.jpeg" alt="Node.js" width="600px" height="300px">
+    <p>
+        Node.js has been a game-changer for building fast and scalable backend services. In this blog post, I dive into how I used Node.js to build backend APIs for my projects like the IKIRARO platform. I’ll also explore its non-blocking I/O model and why it’s ideal for building real-time applications.
+    </p>
+    <a href="blog/nodejs-backend-development.html" class="read-more"style="text-decoration: none; color: #bf7c10;"><strong style="margin-left: 20px;">Read more</strong></a>
+</div>
+</td></tr></table>
+</section>
+
+
+<section id="contact">
+  <h2>Get In Touch</h2>
+  <form id="contact-form" method="POST" action="send-email.php">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="John Doe" required>
+    
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+    
+    <label for="reason">Reason for Contact</label>
+    <select id="reason" name="reason" required>
+      <option value="inquiry">General Inquiry</option>
+      <option value="collaboration">Collaboration</option>
+      <option value="job">Job Opportunity</option>
+    </select>
+    
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="Tell me more about your inquiry..." required></textarea>
+    
+    <button type="submit">Send Message</button>
+  </form>
+
+  <!-- Message container for appreciation -->
+  <div id="appreciation-message" style="display: none; color: green; text-align: center; margin-top: 10px;">
+    <p>Thank you for getting in touch! We appreciate your message, and we will respond shortly.</p>
+  </div>
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        // Client-side validation: Check if all fields are filled out
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let message = document.getElementById("message").value;
+
+        // If any of the required fields is empty, prevent form submission and show an alert
+        if (name === "" || email === "" || message === "") {
+            alert("Please fill out all fields.");
+            event.preventDefault();  // Prevent form submission if any field is empty
+        } else {
+            // Assuming the form submission is successful, redirect to another page
+            event.preventDefault();  // Prevent actual submission for demonstration
+            alert("Your message has been sent successfully!");
+            
+            // Redirect the user to 'mess.html'
+            window.location.href = "mess.html";
+        }
+    });
+</script>
+
+</section>
+
+
+
+
+  <footer>
+   
+    <div class="social-media">
+        <a href="https://wa.me/0781429742" target="_blank" title="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/ niyonkuru-olivier-3195ba286" target="_blank" title="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/nikonde" target="_blank" title="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://x.com/Niyonku11527162?t=-mSujkef9RgVUubIyR20nw&s=09" target="_blank" title="X (Twitter)">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="https://github.com/Niyonkuru-olivier" target="_blank" title="GitHub">
+          <i class="fa-brands fa-github"></i>
+      </a>
+      
+    </div>
+    <br>
+    <p>&copy; 2024 Niyonkuru-olivier. All rights reserved.</p>
+</footer>
+
+
+  <script src="index.js"></script>
+</body>
+</html>
